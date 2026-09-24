@@ -1,0 +1,3 @@
+* text=auto eol=crlf
+*.mo  binary
+*.pyc binary

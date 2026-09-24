@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 5,
+  "opVocabularyVersion": 3,
+  "slug": "streamer-mode",
+  "migrations": [
+    {
+      "version": 1,
+      "description": "flat keys → dotted ancestry keys",
+      "ops": [
+        {
+          "op": "rename",
+          "from": "streamerModeClanNameEnabled",
+          "to": "streamerMode.anonymous.exclude.clanName"
+        },
+        {
+          "op": "rename",
+          "from": "streamerModeClanmateNameEnabled",
+          "to": "streamerMode.anonymous.exclude.clanmateName"
+        },
+        {
+          "op": "rename",
+          "from": "streamerModeDivmateNameEnabled",
+          "to": "streamerMode.anonymous.exclude.divmateName"
+        },
+        {
+          "op": "rename",
+          "from": "streamerModeEnabled",
+          "to": "streamerMode.anonymous.enable"
+        },
+        {
+          "op": "rename",
+          "from": "streamerModeFriendNameEnabled",
+          "to": "streamerMode.anonymous.exclude.friendName"
+        },
+        {
+          "op": "rename",
+          "from": "streamerModeOwnPlayerNameEnabled",
+          "to": "streamerMode.anonymous.exclude.ownName"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 5,
+  "id": "cmtkswuwn0007v014temsafnt",
+  "author": "ttaro",
+  "modName": "Streamer Mode",
+  "slug": "streamer-mode",
+  "order": 7,
+  "tree": [
+    {
+      "kind": "group",
+      "key": "cmtktam44005ov0d44jug0eqp",
+      "display": "section",
+      "label": "IDS_TT_TITLE_ANONYMOUS_MODE",
+      "collapse": "expanded",
+      "children": [
+        {
+          "kind": "setting",
+          "control": "toggle",
+          "key": "streamerMode.anonymous.enable",
+          "label": "IDS_TT_ANONYMIZE_MODE",
+          "hint": {
+            "text": "IDS_TT_HINT_SETTING_AFFECTS_NEXT_MATCH"
+          },
+          "default": true
+        },
+        {
+          "kind": "setting",
+          "control": "text",
+          "key": "streamerMode.anonymous.namePrefix",
+          "label": "IDS_TT_ANONYMOUS_NAME_PREFIX",
+          "default": "Player_",
+          "maxLength": 20,
+          "minLength": 2,
+          "enabledWhen": {
+            "kind": "group",
+            "join": "all",
+            "conditions": [
+              {
+                "kind": "compare",
+                "key": "streamerMode.anonymous.enable",
+                "op": "in",
+                "values": [
+                  1
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "kind": "group",
+          "key": "cmua77orl000av04sk5rjw6mm",
+          "display": "section",
+          "label": "IDS_TT_TITLE_EXCLUDE_FROM_ANONYMIZATION",
+          "hint": {
+            "text": "IDS_TT_HINT_EXCLUDE_FROM_ANONYMIZATION"
+          },
+          "enabledWhen": {
+            "kind": "group",
+            "join": "all",
+            "conditions": [
+              {
+                "kind": "compare",
+                "key": "streamerMode.anonymous.enable",
+                "op": "in",
+                "values": [
+                  1
+                ]
+              }
+            ]
+          },
+          "children": [
+            {
+              "kind": "setting",
+              "control": "toggle",
+              "key": "streamerMode.anonymous.exclude.friendName",
+              "label": "IDS_MY_CONTACTS",
+              "hint": {
+                "text": "IDS_TT_HINT_SETTING_AFFECTS_NEXT_MATCH"
+              },
+              "default": true
+            },
+            {
+              "kind": "setting",
+              "control": "toggle",
+              "key": "streamerMode.anonymous.exclude.clanmateName",
+              "label": "IDS_TT_CLANMATE",
+              "hint": {
+                "text": "IDS_TT_HINT_SETTING_AFFECTS_NEXT_MATCH"
+              },
+              "default": true
+            },
+            {
+              "kind": "setting",
+              "control": "toggle",
+              "key": "streamerMode.anonymous.exclude.divmateName",
+              "label": "IDS_OPTIONS_DIVISION",
+              "hint": {
+                "text": "IDS_TT_HINT_SETTING_AFFECTS_NEXT_MATCH"
+              },
+              "default": true
+            },
+            {
+              "kind": "setting",
+              "control": "toggle",
+              "key": "streamerMode.anonymous.exclude.ownName",
+              "label": "IDS_TT_OWN_PLAYER_NAME",
+              "hint": {
+                "text": "IDS_TT_HINT_SETTING_AFFECTS_NEXT_MATCH"
+              },
+              "default": true
+            },
+            {
+              "kind": "setting",
+              "control": "toggle",
+              "key": "streamerMode.anonymous.exclude.clanName",
+              "label": "IDS_TT_CLAN_NAME",
+              "hint": {
+                "text": "IDS_TT_HINT_SETTING_AFFECTS_NEXT_MATCH"
+              },
+              "default": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
