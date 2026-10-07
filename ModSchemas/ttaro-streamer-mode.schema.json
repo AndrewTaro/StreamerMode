@@ -5,6 +5,7 @@
   "modName": "Streamer Mode",
   "slug": "streamer-mode",
   "order": 7,
+  "migrationVersion": 1,
   "tree": [
     {
       "kind": "group",
